@@ -4,25 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact & Registration | NRA Shooting Academy</title>
-  <link rel="icon" type="image/png" href="/assets/logos/inrstc-1.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/styles.css" />
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/logos/inrstc-1.png" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
+
 <body>
   <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner container">
       <div class="brand">
-        <img src="/assets/flags/Flag_of_the_United_States.svg.png" alt="American Flag" class="brand-flag" />
+        <img src="../assets/flags/Flag_of_the_United_States.svg.png" alt="American Flag" class="brand-flag" />
         <h1>NRA Shooting Academy</h1>
       </div>
+
       <nav class="nav">
-        <a href="/index.html">Home</a>
-        <a href="/services.html">Services</a>
-        <a href="/about.html">About</a>
-        <a href="/resources.html">Resources</a>
-        <a href="/contact.html" class="active">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html" class="active">Contact</a>
       </nav>
     </div>
   </header>
@@ -52,6 +59,7 @@
     <!-- CONTACT FORM -->
     <section class="contact-form">
       <h3>Register or Ask a Question</h3>
+
       <form id="contactForm">
         <div class="form-row">
           <label for="name">Full Name*</label>
@@ -74,11 +82,10 @@
           </select>
         </div>
 
-       <div class="form-row">
-  <label for="date">Preferred Class Date</label>
-  <select id="date" name="date" required></select>
-</div>
-
+        <div class="form-row">
+          <label for="date">Preferred Class Date</label>
+          <select id="date" name="date" required></select>
+        </div>
 
         <div class="form-row">
           <label for="message">Message</label>
@@ -92,7 +99,7 @@
     <!-- INLINE PHOTO -->
     <section class="photo-row container">
       <figure>
-        <img src="/assets/photos/girlshooting.jpg" alt="Training session" />
+        <img src="../assets/photos/girlshooting.jpg" alt="Training session" />
         <figcaption>Training built on safety, confidence, and professionalism.</figcaption>
       </figure>
     </section>
@@ -102,9 +109,10 @@
   <footer class="site-footer">
     <div class="footer-inner container">
       <div class="footer-logos">
-        <img src="/assets/logos/inrstc-1.png" alt="NRA Instructor Logo" />
-        <img src="/assets/logos/national-rifle-association-of-america-nra-vector-logo.png" alt="NRA Logo" />
+        <img src="../assets/logos/inrstc-1.png" alt="NRA Instructor Logo" />
+        <img src="../assets/logos/national-rifle-association-of-america-nra-vector-logo.png" alt="NRA Logo" />
       </div>
+
       <p>© <span id="year"></span> NRA Shooting Academy — John Myseros | Fairfax, VA</p>
       <p class="footer-contact">Phone: 703-587-5293 | Email: john@nrainstruct.com</p>
     </div>
@@ -119,10 +127,10 @@
     const today = new Date(2025, 11, 10); // Dec 10, 2025
     const end = new Date(2025, 11, 31);
     let date = new Date(today);
-    
+
     const saturdays = [];
 
-    // move to the next Saturday
+    // Move to next Saturday
     while (date.getDay() !== 6) {
       date.setDate(date.getDate() + 1);
     }
@@ -135,17 +143,16 @@
     return saturdays;
   }
 
-  // --- Generate All Sundays for a Given Year ---
+  // --- Generate all Sundays for 2026 ---
   function getAllSundays(year) {
     const sundays = [];
     let date = new Date(year, 0, 1);
 
-    // move to first Sunday
+    // Move to first Sunday
     while (date.getDay() !== 0) {
       date.setDate(date.getDate() + 1);
     }
 
-    // push all Sundays
     while (date.getFullYear() === year) {
       sundays.push(new Date(date));
       date.setDate(date.getDate() + 7);
@@ -154,16 +161,14 @@
     return sundays;
   }
 
-  // Greek Easter 2026 — EXCLUDE
   const greekEaster2026 = "2026-04-12";
 
   const dropdown = document.getElementById("date");
 
-  // ----- ADD REMAINING SATURDAYS 2025 -----
+  // ----- Add remaining Saturdays 2025 -----
   const saturdays2025 = getRemainingSaturdays2025();
 
   saturdays2025.forEach(d => {
-    const iso = d.toISOString().split("T")[0];
     const readable = d.toLocaleDateString("en-US", {
       weekday: "long",
       month: "long",
@@ -177,13 +182,13 @@
     dropdown.appendChild(option);
   });
 
-  // ----- ADD SUNDAYS 2026 except Greek Easter -----
+  // ----- Add Sundays 2026 except Greek Easter -----
   const sundays2026 = getAllSundays(2026);
 
   sundays2026.forEach(d => {
     const iso = d.toISOString().split("T")[0];
 
-    if (iso === greekEaster2026) return; // exclude
+    if (iso === greekEaster2026) return;
 
     const readable = d.toLocaleDateString("en-US", {
       weekday: "long",
@@ -198,10 +203,6 @@
     dropdown.appendChild(option);
   });
 
-  // Allow normal form submission (mailto)
-  document.getElementById("contactForm").addEventListener("submit", e => {
-    // do nothing — mailto handles it
-  });
 </script>
 
 </body>

@@ -259,6 +259,12 @@ a {
   max-width: 700px;
   margin: 0 auto 1.5rem;
 }
+/* Make CTA content full width instead of boxed */
+.cta .container {
+  max-width: 100%;
+  padding: 0 1rem;
+}
+
 
 /* -------------------------------
    FOOTER
@@ -538,3 +544,4 @@ input:focus, select:focus, textarea:focus {
 .home-section {
   padding-top: 40px;     /* Spacing under hero */
 }
+

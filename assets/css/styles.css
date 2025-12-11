@@ -545,3 +545,30 @@ input:focus, select:focus, textarea:focus {
   padding-top: 40px;     /* Spacing under hero */
 }
 
+.nra-links {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f8f8f8;
+}
+
+.nra-links h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.nra-button {
+  display: inline-block;
+  margin: 0.4rem 0;
+  padding: 10px 18px;
+  background-color: #003f87; /* deep NRA blue */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.nra-button:hover {
+  background-color: #002e65;
+}

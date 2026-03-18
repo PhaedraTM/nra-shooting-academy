@@ -4,19 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact & Registration | NRA Shooting Academy</title>
-
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/logos/inrstc-1.png" />
-
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/styles.css">
-
 </head>
 
 <body>
+
   <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner container">
@@ -24,7 +18,6 @@
         <img src="assets/flags/Flag_of_the_United_States.svg.png" alt="American Flag" class="brand-flag" />
         <h1>NRA Shooting Academy</h1>
       </div>
-
       <nav class="nav">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
@@ -43,80 +36,82 @@
     </div>
   </section>
 
-  <!-- CONTACT INFO -->
+  <!-- MAIN CONTENT -->
   <main class="container">
-    <section class="contact-info">
-      <h3>Get in Touch</h3>
-      <p><strong>Instructor:</strong> John Myseros</p>
-      <p><strong>Phone:</strong> <a href="tel:7035875293">703-587-5293</a></p>
-      <p><strong>Email:</strong> <a href="mailto:john@nrainstruct.com">john@nrainstruct.com</a></p>
 
-      <h4>Class Locations</h4>
-      <ul>
-        <li>NRA Headquarters Range — 11250 Waples Mill Rd, Fairfax, VA 22030</li>
-      </ul>
+    <!-- TWO-COLUMN: INFO + FORM -->
+    <div class="contact-layout">
+
+      <section class="contact-info">
+        <h3>Get in Touch</h3>
+        <p><strong>Instructor:</strong> John Myseros</p>
+        <p><strong>Phone:</strong> <a href="tel:7035875293">703-587-5293</a></p>
+        <p><strong>Email:</strong> <a href="mailto:john@nrainstruct.com">john@nrainstruct.com</a></p>
+
+        <h4>Class Location</h4>
+        <ul>
+          <li>NRA Headquarters Range<br>11250 Waples Mill Rd, Fairfax, VA 22030</li>
+        </ul>
+      </section>
+
+      <section class="contact-form">
+        <h3>Register or Ask a Question</h3>
+        <form action="https://formspree.io/f/mnneovqz" method="POST">
+          <input type="hidden" name="_subject" value="New NRA Class Registration Submission" />
+
+          <div class="form-row">
+            <label for="name">Full Name*</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-row">
+            <label for="class">Class of Interest</label>
+            <select id="class" name="class">
+              <option value="">Select a course</option>
+              <option>Basic Pistol Shooting</option>
+              <option>Home Firearm Safety</option>
+              <option>Personal Protection in the Home</option>
+              <option>First Steps Pistol</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Questions or special requests..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </section>
+
+    </div>
+
+    <!-- NRA DIRECT REGISTRATION -->
+    <section class="nra-links">
+      <h4>Register Directly Through the NRA — Home Firearm Safety Course</h4>
+      <p>If you prefer, you may sign up immediately using the official NRA registration pages below:</p>
+      <div class="nra-button-group">
+        <a class="nra-button" href="https://www.nrainstructors.org/CourseDetails.aspx?Courseid=901759" target="_blank">February 1, 2026</a>
+        <a class="nra-button" href="https://www.nrainstructors.org/CourseDetails.aspx?Courseid=901913" target="_blank">March 1, 2026</a>
+        <a class="nra-button" href="#" target="_blank">May 3, 2026</a>
+        <a class="nra-button" href="#" target="_blank">June 7, 2026</a>
+        <a class="nra-button" href="#" target="_blank">July 5, 2026</a>
+      </div>
     </section>
 
-    <!-- CONTACT FORM -->
-    <section class="contact-form">
-      <h3>Register or Ask a Question</h3>
-
-      <form action="https://formspree.io/f/mnneovqz" method="POST">
-  <input type="hidden" name="_subject" value="New NRA Class Registration Submission" />
-        <div class="form-row">
-          <label for="name">Full Name*</label>
-          <input type="text" id="name" name="name" required />
-        </div>
-
-        <div class="form-row">
-          <label for="email">Email*</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-
-        <div class="form-row">
-          <label for="class">Class of Interest</label>
-          <select id="class" name="class">
-            <option value="">Select a course</option>
-            <option>Basic Pistol Shooting</option>
-            <option>Home Firearm Safety</option>
-            <option>Personal Protection in the Home</option>
-            <option>First Steps Pistol</option>
-          </select>
-        </div>
-
-        <div class="form-row">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Questions or special requests..."></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-
-<!-- OFFICIAL NRA REGISTRATION LINKS-->
-<div class="nra-links">
-  <h4>Register for the NRA Home Firearm Safety Course Directly Through the NRA</h4>
-  <p>If you prefer, you may sign up immediately using the official NRA registration pages below:</p>
-
-
-  <a class="nra-button" href="https://www.nrainstructors.org/CourseDetails.aspx?Courseid=901759" target="_blank">
-    Register for February 1, 2026
-  </a>
-
-  <a class="nra-button" href="https://www.nrainstructors.org/CourseDetails.aspx?Courseid=901913" target="_blank">
-    Register for March 1, 2026
-  </a>
-</div>
-
-
-    </section>
-
-    <!-- INLINE PHOTO -->
-    <section class="photo-row container">
+    <!-- PHOTO -->
+    <section class="photo-row">
       <figure>
         <img src="assets/photos/girlshooting.jpg" alt="Training session" />
         <figcaption>Training built on safety, confidence, and professionalism.</figcaption>
       </figure>
     </section>
+
   </main>
 
   <!-- FOOTER -->
@@ -126,89 +121,14 @@
         <img src="assets/logos/inrstc-1.png" alt="NRA Instructor Logo" />
         <img src="assets/logos/national-rifle-association-of-america-nra-vector-logo.png" alt="NRA Logo" />
       </div>
-
       <p>© <span id="year"></span> NRA Shooting Academy — John Myseros | Fairfax, VA</p>
       <p class="footer-contact">Phone: 703-587-5293 | Email: john@nrainstruct.com</p>
     </div>
   </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // --- Generate Remaining Saturdays of 2025 ---
-  function getRemainingSaturdays2025() {
-    const today = new Date(2025, 11, 10); 
-    const end = new Date(2025, 11, 31);
-    let date = new Date(today);
-
-    const saturdays = [];
-
-    while (date.getDay() !== 6) {
-      date.setDate(date.getDate() + 1);
-    }
-
-    while (date <= end) {
-      saturdays.push(new Date(date));
-      date.setDate(date.getDate() + 7);
-    }
-
-    return saturdays;
-  }
-
-  // --- Generate all Sundays for 2026 ---
-  function getAllSundays(year) {
-    const sundays = [];
-    let date = new Date(year, 0, 1);
-
-    while (date.getDay() !== 0) {
-      date.setDate(date.getDate() + 1);
-    }
-
-    while (date.getFullYear() === year) {
-      sundays.push(new Date(date));
-      date.setDate(date.getDate() + 7);
-    }
-
-    return sundays;
-  }
-
-  const greekEaster2026 = "2026-04-12";
-  const dropdown = document.getElementById("date");
-
-  // Add remaining Saturdays 2025 :)
-  const saturdays2025 = getRemainingSaturdays2025();
-  saturdays2025.forEach(d => {
-    const readable = d.toLocaleDateString("en-US", {
-      weekday: "long",
-      month: "long",
-      day: "numeric",
-      year: "numeric",
-    });
-    const option = document.createElement("option");
-    option.value = readable;
-    option.textContent = readable + " (Saturday)";
-    dropdown.appendChild(option);
-  });
-
-  // Add Sundays 2026 except Greek Easter
-  const sundays2026 = getAllSundays(2026);
-  sundays2026.forEach(d => {
-    const iso = d.toISOString().split("T")[0];
-    if (iso === greekEaster2026) return;
-
-    const readable = d.toLocaleDateString("en-US", {
-      weekday: "long",
-      month: "long",
-      day: "numeric",
-      year: "numeric",
-    });
-    const option = document.createElement("option");
-    option.value = readable;
-    option.textContent = readable + " (Sunday)";
-    dropdown.appendChild(option);
-  });
-
-</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>

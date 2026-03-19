@@ -4,15 +4,16 @@
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  background-color: #f8f8f8;
-  color: #222;
-  line-height: 1.6;
+  background-color: #f5f5f3;
+  color: #2c2c2c;
+  line-height: 1.7;
 }
 
 h1, h2, h3, h4 {
   font-family: 'Merriweather', serif;
   margin-top: 0;
-  color: #0b1f44;
+  color: #0d2247;
+  line-height: 1.3;
 }
 
 p {
@@ -25,25 +26,24 @@ a {
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1080px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1.75rem;
 }
 
-/* Consistent top/bottom breathing room for inner page content */
 .page-body {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
 }
 
 /* --------------------------------
    HEADER
 -------------------------------- */
 .site-header {
-  background-color: #0b1f44;
+  background-color: #0d2247;
   color: white;
-  padding: 0.75rem 0;
-  border-bottom: 4px solid #b22222;
+  padding: 0.85rem 0;
+  border-bottom: 3px solid #a01f1f;
 }
 
 .header-inner {
@@ -57,61 +57,67 @@ a {
 .brand {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.65rem;
 }
 
 .brand h1 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
   margin: 0;
   color: white;
+  letter-spacing: 0.01em;
 }
 
 .brand-flag {
-  width: 35px;
+  width: 32px;
   height: auto;
   border-radius: 3px;
 }
 
 .nav {
   display: flex;
-  gap: 1.2rem;
+  gap: 1.4rem;
   flex-wrap: wrap;
 }
 
 .nav a {
-  color: white;
+  color: rgba(255, 255, 255, 0.85);
   font-weight: 600;
-  font-size: 0.95rem;
-  transition: color 0.25s;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  transition: color 0.2s;
 }
 
 .nav a:hover,
 .nav a.active {
-  color: #b22222;
+  color: #e8a0a0;
 }
 
 /* --------------------------------
    HERO
 -------------------------------- */
 .hero {
-  background: linear-gradient(to right, #b22222 0%, #0b1f44 100%);
+  background: linear-gradient(135deg, #0d2247 0%, #1a3a6e 60%, #7a1515 100%);
   color: white;
   text-align: center;
-  padding: 4rem 1.5rem;
+  padding: 4.5rem 1.75rem;
 }
 
 .hero h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #ffffff;
+  letter-spacing: 0.01em;
 }
 
 .hero p {
   font-style: italic;
   font-size: 1rem;
-  max-width: 700px;
+  max-width: 680px;
   margin: 0.5rem auto 2rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.75;
 }
 
 /* --------------------------------
@@ -120,53 +126,60 @@ a {
 .btn {
   display: inline-block;
   padding: 0.7rem 1.5rem;
-  border-radius: 4px;
+  border-radius: 5px;
   font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
   text-align: center;
-  transition: background 0.25s, color 0.25s, border-color 0.25s;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
   cursor: pointer;
   border: 2px solid transparent;
 }
 
 .btn-primary {
-  background-color: #b22222;
+  background-color: #a01f1f;
   color: white;
-  border-color: #b22222;
+  border-color: #a01f1f;
 }
 
 .btn-primary:hover {
-  background-color: #8b1a1a;
-  border-color: #8b1a1a;
+  background-color: #7d1818;
+  border-color: #7d1818;
+  box-shadow: 0 2px 8px rgba(160, 31, 31, 0.3);
 }
 
 .btn-outline {
   background-color: transparent;
-  border-color: #b22222;
-  color: #b22222;
+  border-color: #a01f1f;
+  color: #a01f1f;
 }
 
 .btn-outline:hover {
-  background-color: #b22222;
+  background-color: #a01f1f;
   color: white;
 }
 
 .btn-small {
-  padding: 0.45rem 0.9rem;
+  padding: 0.45rem 1rem;
   font-size: 0.85rem;
 }
 
 /* --------------------------------
-   HOME PAGE — UPCOMING DATES
+   HOME — UPCOMING DATES
 -------------------------------- */
 .upcoming-dates {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.upcoming-dates h3 {
+  margin-bottom: 0.4rem;
 }
 
 .upcoming-dates > p {
-  color: #555;
-  font-size: 0.95rem;
-  margin-bottom: 1.25rem;
+  color: #666;
+  font-size: 0.93rem;
+  margin-bottom: 1.5rem;
 }
 
 .dates-grid {
@@ -177,48 +190,42 @@ a {
 }
 
 .date-card {
-  background-color: white;
-  border-top: 4px solid #b22222;
-  border-radius: 6px;
-  padding: 1.5rem 2rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.09);
-  min-width: 240px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.6rem 2rem;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.07), 0 4px 16px rgba(0, 0, 0, 0.06);
+  min-width: 230px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+  border-top: 3px solid #a01f1f;
 }
 
 .date-label {
   font-family: 'Merriweather', serif;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 700;
-  color: #0b1f44;
+  color: #0d2247;
 }
 
 .date-time {
-  font-size: 0.9rem;
-  color: #444;
-}
-
-.date-seats {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #b22222;
-  margin-bottom: 0.25rem;
+  font-size: 0.88rem;
+  color: #555;
+  margin-bottom: 0.5rem;
 }
 
 /* --------------------------------
-   HOME PAGE — ABOUT PREVIEW
+   HOME — ABOUT PREVIEW
 -------------------------------- */
 .home-about {
-  max-width: 820px;
-  margin: 0 auto 3rem;
+  max-width: 800px;
+  margin: 0 auto 3.5rem;
   text-align: center;
 }
 
 .home-about h3 {
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .home-about .btn {
@@ -244,33 +251,35 @@ a {
 }
 
 .class-card {
-  background-color: white;
-  padding: 1.5rem;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+  padding: 1.75rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06), 0 4px 14px rgba(0, 0, 0, 0.06);
   text-align: left;
-  transition: box-shadow 0.25s, transform 0.25s;
+  transition: box-shadow 0.2s, transform 0.2s;
 }
 
 .class-card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
   transform: translateY(-2px);
 }
 
 .class-card h4 {
   margin-bottom: 0.75rem;
-  color: #0b1f44;
+  color: #0d2247;
 }
 
 .class-card p {
-  font-size: 0.95rem;
+  font-size: 0.94rem;
   margin-bottom: 1rem;
+  color: #444;
 }
 
 .class-card ul {
   font-size: 0.9rem;
   padding-left: 1.1rem;
   margin-bottom: 1.25rem;
+  color: #444;
 }
 
 /* --------------------------------
@@ -288,8 +297,8 @@ a {
   width: 100%;
   max-width: 320px;
   height: auto;
-  border-radius: 6px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
 
 .photo-row figure {
@@ -300,9 +309,9 @@ a {
 }
 
 .photo-row figcaption {
-  font-size: 0.85rem;
-  color: #555;
-  margin-top: 0.4rem;
+  font-size: 0.83rem;
+  color: #777;
+  margin-top: 0.5rem;
   text-align: center;
   font-style: italic;
 }
@@ -311,14 +320,14 @@ a {
    CALL TO ACTION
 -------------------------------- */
 .cta {
-  background-color: #0b1f44;
+  background-color: #0d2247;
   color: white;
   text-align: center;
-  padding: 3.5rem 1.5rem;
+  padding: 4rem 1.75rem;
 }
 
 .cta .container {
-  max-width: 700px;
+  max-width: 680px;
 }
 
 .cta h3 {
@@ -328,7 +337,8 @@ a {
 }
 
 .cta p {
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 1.75rem;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* --------------------------------
@@ -336,11 +346,11 @@ a {
 -------------------------------- */
 .site-footer {
   background-color: #fff;
-  padding: 2rem 1.5rem;
+  padding: 2.25rem 1.75rem;
   text-align: center;
-  font-size: 0.9rem;
-  color: #444;
-  border-top: 2px solid #b22222;
+  font-size: 0.88rem;
+  color: #555;
+  border-top: 3px solid #a01f1f;
 }
 
 .footer-logos {
@@ -352,13 +362,14 @@ a {
 }
 
 .footer-logos img {
-  height: 50px;
+  height: 48px;
   width: auto;
+  opacity: 0.9;
 }
 
 .footer-contact {
-  font-size: 0.9rem;
-  color: #333;
+  font-size: 0.88rem;
+  color: #444;
   margin-top: 0.25rem;
 }
 
@@ -370,13 +381,13 @@ a {
 }
 
 .about-text {
-  max-width: 860px;
+  max-width: 820px;
   margin: 0 auto;
-  line-height: 1.75;
+  line-height: 1.8;
 }
 
 .about-text h3 {
-  font-size: 1.8rem;
+  font-size: 1.75rem;
   margin-bottom: 1rem;
 }
 
@@ -385,23 +396,29 @@ a {
 -------------------------------- */
 .mission {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
+  padding: 2.5rem 1.75rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
 }
 
 .mission p {
-  max-width: 800px;
+  max-width: 760px;
   margin: 1rem auto;
+  color: #444;
 }
 
 .mission blockquote {
   font-family: 'Merriweather', serif;
   font-style: italic;
-  color: #0b1f44;
-  max-width: 700px;
+  color: #0d2247;
+  max-width: 680px;
   margin: 1.5rem auto 0;
-  border-left: 4px solid #b22222;
+  border-left: 4px solid #a01f1f;
   padding-left: 1.25rem;
   text-align: left;
+  line-height: 1.8;
 }
 
 /* --------------------------------
@@ -418,28 +435,29 @@ a {
 
 .testimonial-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1rem;
 }
 
 .testimonial-grid blockquote {
   background-color: white;
-  border-left: 4px solid #b22222;
-  padding: 1rem 1.25rem;
+  border-left: 3px solid #a01f1f;
+  padding: 1.1rem 1.25rem;
   border-radius: 6px;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  font-size: 0.93rem;
+  line-height: 1.6;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
   margin: 0;
   text-align: left;
+  color: #333;
 }
 
 .testimonial-grid blockquote span {
   display: block;
   margin-top: 0.5rem;
-  color: #555;
+  color: #777;
   font-style: italic;
-  font-size: 0.85rem;
+  font-size: 0.83rem;
 }
 
 /* --------------------------------
@@ -461,33 +479,33 @@ a {
 
 .resource-list li {
   background-color: white;
-  border-left: 4px solid #b22222;
-  padding: 1rem 1.25rem;
+  border-left: 4px solid #a01f1f;
+  padding: 1.1rem 1.5rem;
   margin-bottom: 1rem;
   border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-  transition: box-shadow 0.25s;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s;
 }
 
 .resource-list li:hover {
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
 }
 
 .resource-list a {
   font-weight: 600;
-  color: #0b1f44;
-  font-size: 1rem;
+  color: #0d2247;
+  font-size: 0.97rem;
 }
 
 .resource-list a:hover {
-  color: #b22222;
+  color: #a01f1f;
   text-decoration: underline;
 }
 
 .resource-list p {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   margin: 0.3rem 0 0;
-  color: #555;
+  color: #666;
 }
 
 /* --------------------------------
@@ -502,22 +520,24 @@ a {
 }
 
 .contact-info h3 {
-  color: #0b1f44;
+  color: #0d2247;
   margin-bottom: 0.75rem;
 }
 
 .contact-info h4 {
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
+  font-size: 1rem;
 }
 
 .contact-info ul {
   padding-left: 1.1rem;
-  line-height: 1.7;
+  line-height: 1.8;
+  color: #444;
 }
 
 .contact-info a {
-  color: #b22222;
+  color: #a01f1f;
 }
 
 .contact-info a:hover {
@@ -526,13 +546,13 @@ a {
 
 .contact-form {
   background-color: white;
-  padding: 2rem;
-  border-radius: 6px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.09);
+  padding: 2.25rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.07), 0 4px 18px rgba(0, 0, 0, 0.06);
 }
 
 .contact-form h3 {
-  color: #0b1f44;
+  color: #0d2247;
   margin-bottom: 1.25rem;
 }
 
@@ -550,93 +570,98 @@ a {
 label {
   font-weight: 600;
   margin-bottom: 0.3rem;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
+  color: #333;
 }
 
 input, select, textarea {
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 0.6rem 0.75rem;
-  font-size: 1rem;
+  border: 1px solid #d0d0d0;
+  border-radius: 5px;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.97rem;
   font-family: 'Open Sans', sans-serif;
+  background-color: #fafafa;
   transition: border-color 0.2s, box-shadow 0.2s;
+  color: #2c2c2c;
 }
 
 input:focus, select:focus, textarea:focus {
   outline: none;
-  border-color: #b22222;
-  box-shadow: 0 0 0 3px rgba(178, 34, 34, 0.15);
+  border-color: #a01f1f;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(160, 31, 31, 0.1);
 }
 
-/* NRA Direct Registration Links */
+/* NRA Direct Registration */
 .nra-links {
-  background-color: white;
-  border: 1px solid #dde;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
   border-radius: 8px;
   padding: 1.75rem 2rem;
   margin-bottom: 2.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
 }
 
 .nra-links h4 {
-  margin-bottom: 0.5rem;
-  font-size: 1.05rem;
-  color: #0b1f44;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  color: #0d2247;
 }
 
 .nra-links p {
   margin-bottom: 1rem;
-  font-size: 0.95rem;
-  color: #444;
+  font-size: 0.92rem;
+  color: #555;
 }
 
 .nra-button-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 0.65rem;
 }
 
 .nra-button {
   display: inline-block;
   padding: 0.55rem 1.1rem;
-  background-color: #0b1f44;
+  background-color: #0d2247;
   color: white;
   text-decoration: none;
   border-radius: 5px;
   font-weight: 600;
-  font-size: 0.9rem;
-  transition: background-color 0.25s;
+  font-size: 0.88rem;
+  transition: background-color 0.2s, box-shadow 0.2s;
 }
 
 .nra-button:hover {
-  background-color: #b22222;
+  background-color: #a01f1f;
+  box-shadow: 0 2px 8px rgba(160, 31, 31, 0.25);
 }
 
 /* --------------------------------
    ARTICLE PAGE
 -------------------------------- */
 .container.article {
-  max-width: 820px;
+  max-width: 800px;
   margin: 2.5rem auto;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 .container.article h1 {
   font-family: 'Merriweather', serif;
-  font-size: 1.9rem;
+  font-size: 1.85rem;
   margin-bottom: 0.5rem;
-  color: #0b1f44;
+  color: #0d2247;
 }
 
 .meta {
-  color: #666;
-  font-size: 0.95rem;
+  color: #777;
+  font-size: 0.92rem;
   margin-bottom: 1.25rem;
 }
 
 .container.article p {
   margin-bottom: 1rem;
-  color: #222;
+  color: #333;
 }
 
 /* --------------------------------
@@ -644,16 +669,17 @@ input:focus, select:focus, textarea:focus {
 -------------------------------- */
 @media (max-width: 768px) {
   .brand h1 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 
   .nav {
     justify-content: center;
     margin-top: 0.4rem;
+    gap: 1rem;
   }
 
   .hero h2 {
-    font-size: 1.6rem;
+    font-size: 1.55rem;
   }
 
   .photo-row img {
@@ -662,5 +688,15 @@ input:focus, select:focus, textarea:focus {
 
   .contact-layout {
     grid-template-columns: 1fr;
+  }
+
+  .dates-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .date-card {
+    width: 100%;
+    max-width: 340px;
   }
 }
